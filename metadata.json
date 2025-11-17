@@ -1,0 +1,5 @@
+{
+  "name": "Whoosh Designer",
+  "description": "A professional in-browser tool for designing, auditioning, and rendering cinematic whoosh sound effects using the Web Audio API. Create complex sounds with multiple layers, envelopes, and effects.",
+  "requestFramePermissions": []
+}
