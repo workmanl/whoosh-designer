@@ -215,20 +215,24 @@ function App() {
 
       {/* Main Content */}
       <main className="flex-grow grid grid-cols-1 lg:grid-cols-3 gap-4">
+        {/* Left: Layers */}
         <div className="lg:col-span-2 flex flex-col gap-4">
-          {/* Layers */}
           {settings.layers.map(layer => (
             <LayerStrip key={layer.id} layer={layer} onUpdate={updateLayer} masterDuration={settings.global.masterDuration}/>
           ))}
-          {/* Global Controls */}
+        </div>
+
+        {/* Right: Waveform + Controls */}
+        <div className="flex flex-col gap-4">
+          {/* Waveform - Compact */}
+          <div className="bg-gray-900 rounded-lg" style={{ height: '300px' }}>
+            <WaveformDisplay settings={settings} isPlaying={isPlaying} playbackProgress={playbackProgress} />
+          </div>
+
+          {/* Master and Reverb Controls */}
           <div className="bg-gray-800 rounded-lg p-4">
             <GlobalControls settings={settings.global} onUpdate={updateGlobal} />
           </div>
-        </div>
-
-        {/* Waveform */}
-        <div className="bg-gray-900 rounded-lg h-full">
-          <WaveformDisplay settings={settings} isPlaying={isPlaying} playbackProgress={playbackProgress} />
         </div>
       </main>
     </div>
