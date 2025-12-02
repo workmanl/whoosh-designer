@@ -57,10 +57,8 @@ const createNoiseBuffer = (
   return buffer;
 };
 
-const createImpulseResponse = (context: BaseAudioContext) => {
+const createImpulseResponse = (context: BaseAudioContext, duration: number = 2, decay: number = 2) => {
     const sr = context.sampleRate;
-    const duration = 2;
-    const decay = 2;
     const impulse = context.createBuffer(2, sr * duration, sr);
     const left = impulse.getChannelData(0);
     const right = impulse.getChannelData(1);
@@ -95,7 +93,7 @@ const buildGraph = (context: BaseAudioContext, settings: WhooshSettings) => {
   lpf.frequency.setValueAtTime(global.lpfFreq, now);
   
   const reverb = context.createConvolver();
-  reverb.buffer = createImpulseResponse(context);
+  reverb.buffer = createImpulseResponse(context, global.reverbTime, global.reverbDecay);
   const reverbWet = context.createGain();
   reverbWet.gain.setValueAtTime(global.reverbMix, now);
   const reverbDry = context.createGain();

@@ -37,6 +37,8 @@ export interface GlobalSettings {
   hpfFreq: number;
   lpfFreq: number;
   reverbMix: number;
+  reverbTime: number;
+  reverbDecay: number;
 }
 
 export interface WhooshSettings {

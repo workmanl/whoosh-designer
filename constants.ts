@@ -31,6 +31,8 @@ export const INITIAL_SETTINGS: WhooshSettings = {
     hpfFreq: 20,
     lpfFreq: 20000,
     reverbMix: 0.3,
+    reverbTime: 0.8,
+    reverbDecay: 2.0,
   },
 };
 
@@ -44,7 +46,7 @@ export const PRESETS: Preset[] = [
         { id: 2, enabled: true, name: 'Body', sourceType: 'noise', noiseType: 'pink', envelope: { attack: 0.1, hold: 0.1, decay: 0.6 }, pitch: { start: 400, end: 200 }, pan: { start: -0.5, end: 0.5 }, volume: 0.8 },
         { id: 3, enabled: false, name: 'Tone', sourceType: 'sine', noiseType: 'white', envelope: { attack: 0.05, hold: 0.2, decay: 0.5 }, pitch: { start: 300, end: 150 }, pan: { start: 0, end: 0 }, volume: 0.4 },
       ],
-      global: { masterDuration: 1, masterVolume: 0.8, hpfFreq: 150, lpfFreq: 12000, reverbMix: 0.4 },
+      global: { masterDuration: 1, masterVolume: 0.8, hpfFreq: 150, lpfFreq: 12000, reverbMix: 0.4, reverbTime: 2.5, reverbDecay: 2.5 },
     },
   },
   {
@@ -56,7 +58,7 @@ export const PRESETS: Preset[] = [
         { id: 2, enabled: false, name: 'Layer 2', sourceType: 'noise', noiseType: 'pink', envelope: { attack: 0.1, hold: 0.2, decay: 0.7 }, pitch: { start: 440, end: 880 }, pan: { start: -0.8, end: 0.8 }, volume: 0.7 },
         { id: 3, enabled: false, name: 'Layer 3', sourceType: 'sine', noiseType: 'white', envelope: { attack: 0.1, hold: 0.2, decay: 0.7 }, pitch: { start: 440, end: 880 }, pan: { start: -0.8, end: 0.8 }, volume: 0.7 },
       ],
-      global: { masterDuration: 0.2, masterVolume: 0.9, hpfFreq: 800, lpfFreq: 18000, reverbMix: 0.1 },
+      global: { masterDuration: 0.2, masterVolume: 0.9, hpfFreq: 800, lpfFreq: 18000, reverbMix: 0.1, reverbTime: 1.0, reverbDecay: 1.5 },
     },
   },
   {
@@ -68,7 +70,7 @@ export const PRESETS: Preset[] = [
         { id: 2, enabled: true, name: 'Wind', sourceType: 'noise', noiseType: 'brown', envelope: { attack: 0.1, hold: 0.1, decay: 0.8 }, pitch: { start: 400, end: 300 }, pan: { start: -0.8, end: 0.8 }, volume: 0.8 },
         { id: 3, enabled: false, name: 'Layer 3', sourceType: 'sine', noiseType: 'white', envelope: { attack: 0.1, hold: 0.2, decay: 0.7 }, pitch: { start: 440, end: 880 }, pan: { start: -0.8, end: 0.8 }, volume: 0.7 },
       ],
-      global: { masterDuration: 0.6, masterVolume: 0.7, hpfFreq: 250, lpfFreq: 9000, reverbMix: 0.6 },
+      global: { masterDuration: 0.6, masterVolume: 0.7, hpfFreq: 250, lpfFreq: 9000, reverbMix: 0.6, reverbTime: 3.0, reverbDecay: 3.0 },
     },
   },
     {
@@ -80,7 +82,7 @@ export const PRESETS: Preset[] = [
         { id: 2, enabled: true, name: 'Sparkle', sourceType: 'noise', noiseType: 'white', envelope: { attack: 0.2, hold: 0.5, decay: 1.0 }, pitch: { start: 8000, end: 16000 }, pan: { start: -1, end: 1 }, volume: 0.3 },
         { id: 3, enabled: true, name: 'Rumble', sourceType: 'square', noiseType: 'white', envelope: { attack: 1.2, hold: 0.1, decay: 0.8 }, pitch: { start: 50, end: 80 }, pan: { start: -0.2, end: 0.2 }, volume: 0.7 },
       ],
-      global: { masterDuration: 2.0, masterVolume: 0.8, hpfFreq: 40, lpfFreq: 15000, reverbMix: 0.7 },
+      global: { masterDuration: 2.0, masterVolume: 0.8, hpfFreq: 40, lpfFreq: 15000, reverbMix: 0.7, reverbTime: 3.5, reverbDecay: 2.0 },
     },
   },
 ];
