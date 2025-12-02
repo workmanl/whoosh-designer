@@ -43,6 +43,8 @@ const settingsReducer = (state: WhooshSettings, action: Action): WhooshSettings 
                 hpfFreq: Math.pow(10, Math.random() * 2 + 1.3), // 20Hz - 2kHz
                 lpfFreq: Math.pow(10, Math.random() * 1 + 3.3), // 2kHz - 20kHz
                 reverbMix: Math.random() * 0.8,
+                reverbTime: Math.random() * 3.5 + 0.5, // 0.5s - 4s
+                reverbDecay: Math.random() * 4 + 1, // 1 - 5
             },
             layers: state.layers.map(layer => {
                 const isNoise = Math.random() > 0.4;
